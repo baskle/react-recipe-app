@@ -14,7 +14,6 @@ const App = () => {
       `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     const data = response.json();
-    console.log(data);
   };
 
   return (
