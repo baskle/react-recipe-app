@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Recipe from "./Recipe";
 
 const App = () => {
   const APP_ID = "e7de1eaf";
@@ -17,6 +18,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    // console.log(data.hits);
   };
 
   return (
@@ -27,6 +29,7 @@ const App = () => {
           Search
         </button>
       </form>
+      <Recipe />
     </div>
   );
 };
