@@ -5,6 +5,8 @@ const App = () => {
   const APP_ID = "e7de1eaf";
   const APP_KEY = "0c66e30803206c41ffd23177884443f9";
 
+  const [recipes, setRecipes] = useState([]);
+
   useEffect(() => {
     getRecipes();
   }, []);
@@ -13,7 +15,8 @@ const App = () => {
     const response = await fetch(
       `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    const data = response.json();
+    const data = await response.json();
+    setRecipes(data.hits);
   };
 
   return (
