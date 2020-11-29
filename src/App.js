@@ -29,7 +29,13 @@ const App = () => {
           Search
         </button>
       </form>
-      <Recipe />
+      {recipes.map((recipe) => (
+        <Recipe
+          title={recipe.recipe.label}
+          calories={recipe.recipe.calories}
+          image={recipe.recipe.image}
+        />
+      ))}
     </div>
   );
 };
