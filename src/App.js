@@ -19,6 +19,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log("I chnage the code, and i liked it");
   };
 
   const updateSearch = (e) => {
