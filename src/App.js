@@ -4,6 +4,9 @@ import Recipe from "./Recipe";
 const { KeyVault } = require("./secrets.json");
 
 const App = () => {
+  // const APP_ID = "e7de1eaf";
+  // const APP_KEY = "0c66e30803206c41ffd23177884443f9";
+
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -17,6 +20,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log("I chnage the code, and i liked it");
   };
 
   const updateSearch = (e) => {
@@ -34,7 +38,7 @@ const App = () => {
           onChange={updateSearch}
         ></input>
         <button className="search-button" type="submit">
-          Search recipe
+          Search
         </button>
       </form>
       {recipes.map((recipe) => (
