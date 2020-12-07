@@ -34,7 +34,7 @@ const App = () => {
           onChange={updateSearch}
         ></input>
         <button className="search-button" type="submit">
-          Search
+          Search recipe
         </button>
       </form>
       {recipes.map((recipe) => (
