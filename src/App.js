@@ -4,9 +4,6 @@ import Recipe from "./Recipe";
 const { KeyVault } = require("./secrets.json");
 
 const App = () => {
-  // const APP_ID = "e7de1eaf";
-  // const APP_KEY = "0c66e30803206c41ffd23177884443f9";
-
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
 
