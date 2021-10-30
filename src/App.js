@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 
-const { KeyVault } = require("./secrets.json");
+const { KeyVault } = require("./security/secrets.json");
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
